@@ -144,4 +144,4 @@ flareops/
 
 ## Prompt History
 
-AI-assisted coding was used throughout development. The prompt history is available in the repository as required.
+AI-assisted coding was used throughout development. The full prompt history is documented in [`PROMPT_HISTORY.md`](./PROMPT_HISTORY.md) as required.
