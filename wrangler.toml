@@ -1,0 +1,28 @@
+name = "flareops"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers AI binding — gives access to Llama 3.3 and other models
+[ai]
+binding = "AI"
+
+# D1 database — incident history and messages
+[[d1_databases]]
+binding = "DB"
+database_name = "flareops-db"
+database_id = "14f6dc4d-1c65-41f0-8fd5-65a7b166df27"
+
+# Durable Objects — per-incident live conversation state
+[durable_objects]
+bindings = [
+  { name = "INCIDENT_SESSION", class_name = "IncidentSession" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["IncidentSession"]
+
+# Dev settings
+[vars]
+ENVIRONMENT = "development"

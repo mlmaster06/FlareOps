@@ -1,0 +1,17 @@
+{
+  "name": "flareops",
+  "version": "1.0.0",
+  "description": "AI-powered incident triage assistant built on Cloudflare Workers",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute flareops-db --local --file=./sql/schema.sql",
+    "db:init:remote": "wrangler d1 execute flareops-db --file=./sql/schema.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^3.99.0"
+  }
+}
